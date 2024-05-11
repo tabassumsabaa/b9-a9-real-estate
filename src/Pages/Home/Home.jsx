@@ -1,3 +1,4 @@
+import Footer from "../../Component/Footer/Footer";
 import Navbar from "../../Component/Navbar/Navbar";
 import Slider from "../../Component/Slider/Slider";
 
@@ -9,6 +10,7 @@ const Home = () => {
                 <Navbar></Navbar>
                 <Slider></Slider>
             </div>
+            <Footer></Footer>
         </div>
     );
 };
