@@ -4,8 +4,8 @@ import userDefaultPic from "../../assets/image/hostel-logo.jpg";
 const Navbar = () => {
     const navLinks =<>
     <li> <NavLink to="/">Home</NavLink></li>        
-    <li> <NavLink to="/">Update</NavLink></li>   
-    <li> <NavLink to="/">Profile</NavLink></li>
+    <li> <NavLink to="/login">Update</NavLink></li>   
+    <li> <NavLink to=" ">Profile</NavLink></li>
     
 </>
     return (
