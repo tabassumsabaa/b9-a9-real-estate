@@ -1,0 +1,75 @@
+[
+    {
+      "id": 1,
+      "image": "https://i.ibb.co/nn5L73W/four.jpg",
+      "estate_title": " Bsc 1st & 2nd years students dormetory",
+      "segment_name": "Residential",
+      "description": "Description of estate 1",
+      "price": "$500,000",
+      "status": "Tripal",
+      "area": "2000 sq ft",
+      "location": "Location: Action area-2, Rajarhat, Newtown-700160",
+      "facilities": ["living room", "swimming pool", "kitchen"]
+    },
+    {
+      "id": 2,
+      "image": "https://i.ibb.co/vj0Dh12/six.jpg",
+      "estate_title": " Bsc 3rd & 4th years students dormetory",
+      "segment_name": "Residential",
+      "description": "Description of estate 2",
+      "price": "$600,000",
+      "status": "tripal",
+      "area": "2500 sq ft",
+      "location": "Location: Action area-2, Rajarhat, Newtown-700161",
+      "facilities": ["living room", "garden", "gym"]
+    },
+    {
+      "id": 3,
+      "image": "https://i.ibb.co/mTXMspr/coding.jpg",
+      "estate_title": "International studets.",
+      "segment_name": "Commercial",
+      "description": "Description of estate 3",
+      "price": "$1,200,000",
+      "status": "double",
+      "area": "5000 sq ft",
+      "location": "Location: Action area-2, Rajarhat, Newtown-700162",
+      "facilities": ["office space", "conference room", "parking"]
+    },
+    {
+      "id": 4,
+      "image": "https://i.ibb.co/nn5L73W/four.jpg",
+      "estate_title": "Msc Candidates gets this.",
+      "segment_name": "Residential",
+      "description": "Description of estate 4",
+      "price": "$700,000",
+      "status": "double",
+      "area": "2200 sq ft",
+      "location": "Location: Action area-2, Rajarhat, Newtown-700163",
+      "facilities": ["living room", "swimming pool", "garden"]
+    },
+    {
+      "id": 5,
+      "image": "https://i.ibb.co/vj0Dh12/six.jpg",
+      "estate_title": "Only For Phd Students.",
+      "segment_name": "Residential",
+      "description": "Description of estate 5",
+      "price": "$800,000",
+      "status": "single",
+      "area": "2800 sq ft",
+      "location": "Location: Action area-2, Rajarhat, Newtown-700164",
+      "facilities": ["living room", "gym", "garden"]
+    },
+    {
+        "id": 6,
+        "image": "https://i.ibb.co/mTXMspr/coding.jpg",
+        "estate_title": "Any Medical candidats.",
+        "segment_name": "Residential",
+        "description": "Description of estate 5",
+        "price": "$800,000",
+        "status": "single",
+        "area": "2800 sq ft",
+        "location": "Location: Action area-2, Rajarhat, Newtown-700165",
+        "facilities": ["living room", "gym", "garden"]
+      }
+  ]
+  

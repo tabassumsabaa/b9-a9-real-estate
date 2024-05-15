@@ -11,6 +11,10 @@ import Home from './Pages/Home/Home';
 import Error from './Pages/Error/Error';
 import Login from './Pages/Login/Login';
 import Register from './Pages/Register/Register';
+import AuthProvider from './Provider/AuthProvider';
+// import PrivateRouter from './Provider/PrivateRouter';
+// import EstateList from './Component/Estate/EstateList';
+import EstateDetails from './Component/Estate/EstateDetails';
 
 const router = createBrowserRouter([
   {
@@ -21,16 +25,20 @@ const router = createBrowserRouter([
       {
           path: '/',
           element: <Home></Home>,
+          loader: () => fetch('estatesData.json')
+      },
+      {
+        path: '/estatesData/:id',
+        element: <EstateDetails></EstateDetails> 
       },
       {
         path: '/login',
         element: <Login></Login>
-    },
-    {
-      path: '/register',
-      element: <Register></Register>,
-    }
-
+      },
+      {
+        path: '/register',
+        element: <Register></Register>,
+      }
   ]
   },
 ]);
@@ -38,6 +46,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-      <RouterProvider router={router} />
+    <AuthProvider>
+       <RouterProvider router={router} />
+    </AuthProvider>      
   </React.StrictMode>,
 )

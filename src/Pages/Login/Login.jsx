@@ -1,8 +1,22 @@
-import { Link } from "react-router-dom/dist";
 import Navbar from "../../Component/Navbar/Navbar";
+import { useContext, useState } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { Link, useLocation, useNavigate,  } from "react-router-dom";
 
 
 const Login = () => {
+    const {signIn} = useContext(AuthContext);
+    const location = useLocation();
+    const navigate = useNavigate();
+    console.log('location in the log in page' , location);
+  
+
+    const [success, setSuccess] = useState('');
+    const [loginError, setLoginError] = useState('');
+    const [showPassword, setShowPassword ] =useState(false);
+
+
     const handleLogin = e =>{
         e.preventDefault();       
         console.log(e.currentTarget);
@@ -10,7 +24,34 @@ const Login = () => {
         const email = form.get('email');
         const password = form.get('password');
         console.log(email, password);
+
+         setLoginError();
+         setSuccess();
+
+        if (password.length < 6) {
+            setLoginError(
+                "Password must contain at least 6 characters long."
+            );
+            return; // Don't proceed with login if password is invalid
+        } else if(!/[A-Z]/.test(password)) {
+            setLoginError('Password must have at least one uppercase.');
+            return;
+        }
+
+
+        signIn(email, password)
+           .then(result =>{
+               console.log(result.user)
+               // navigate after log in
+                navigate(location.state ? location.state : '/');
+           })
+           .catch(error =>{
+               console.log(error);
+           })
     }  
+
+   
+
     return (
         <div>
             <Navbar></Navbar>
@@ -27,7 +68,17 @@ const Login = () => {
                       <label className="label">
                          <span className="label-text">Password</span>
                       </label>
-                      <input type="password" name="password" placeholder="password" className="input input-bordered" required />
+
+                       <div className="relative items-center">
+                          <input type={showPassword ? 'text' : 'password' } name="password" placeholder="password" className="input input-bordered w-full" required />                            
+                           <span onClick={() => setShowPassword(!showPassword)} className="absolute top-3 right-2 ">
+                              {
+                                  showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
+                              }
+                          </span>                           
+                       </div> 
+                       {loginError && <p style={{ color: 'red' }}>{loginError}</p>}
+
                       <label className="label">
                          <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                       </label>
