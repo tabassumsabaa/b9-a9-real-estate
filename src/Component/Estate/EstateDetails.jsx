@@ -42,15 +42,3 @@ function EstateDetails() {
 }
 
 export default EstateDetails;
-
-
-
-// const EstateDetails = () => {
-//     return (
-//         <div>
-//            <h2>this is detail page</h2>
-//         </div>
-//     );
-//  };
- 
-//  export default EstateDetails;
